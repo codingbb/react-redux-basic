@@ -1,20 +1,16 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
-import CounterRoot from "./components/CounterRoot";
-import DisplayCountRoot from "./components/DisplayCountRoot";
+import Counter from "./components/Counter";
+import DisplayCount from "./components/DisplayCount";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   return (
     <div className="App">
       <h1>Root</h1>
-      <CounterRoot
-        changeCount={(count) => {
-          console.log(count);
-          setCount(count);
-        }}
-      ></CounterRoot>
-      <DisplayCountRoot count={count}></DisplayCountRoot>
+      {/* 이제 컴포넌트를 바로 불러오면 됨! */}
+      <Counter></Counter>
+      <DisplayCount></DisplayCount>
     </div>
   );
 }
